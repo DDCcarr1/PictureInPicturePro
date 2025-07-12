@@ -32,5 +32,12 @@
   "host_permissions": [
     "<all_urls>"
   ],
-  "manifest_version": 3
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["youtubeMiniplayerOverride.js"],
+      "runAt": "document_idle"
+    }
+  ],
+  "manifest_version": 4
 }
